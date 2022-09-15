@@ -49,7 +49,7 @@ class _Custtom_Stock_Gains_cardState extends State<Custtom_Stock_Gains_card> {
       'This Hours',
     ];
     return ScreenUtilInit(
-      builder: () => Column(
+      builder: (context, child) => Column(
         children: [
           Center(
             child: Container(

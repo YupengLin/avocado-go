@@ -43,8 +43,8 @@ class _SettingsState extends State<Settings> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
 
-    return ScreenUtilInit(
-      builder: () => Scaffold(
+    return ScreenUtilInit(builder: (context, child) {
+      return Scaffold(
         backgroundColor: notifier.getwihitecolor,
         appBar: CustomAppBar(
             notifier.getwihitecolor, "Settings", notifier.getblck,
@@ -140,8 +140,8 @@ class _SettingsState extends State<Settings> {
             ],
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 
   Widget Dark_mode() {

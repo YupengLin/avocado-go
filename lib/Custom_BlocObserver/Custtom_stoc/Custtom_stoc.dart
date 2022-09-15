@@ -45,7 +45,7 @@ class _Custtom_stocState extends State<Custtom_stoc> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Container(
+      builder: (context, child) => Container(
         margin: EdgeInsets.only(left: width / 15),
         height: height / 5,
         width: width / 2.1,

@@ -42,7 +42,7 @@ class _ConfirmOrderState extends State<ConfirmOrder> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         appBar: CustomAppBar(
             notifier.getwihitecolor, "Confirm Order", notifier.getblck,

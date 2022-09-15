@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Custompasswordtextfild {
-  static Widget textField(labletext, focuscolor, preicon, lablecolor,iconcolor,textcolor) {
+  static Widget textField(
+      labletext, focuscolor, preicon, lablecolor, iconcolor, textcolor) {
     bool hidePassword = true;
     return ScreenUtilInit(
-      builder: () => Container(
+      builder: (context, child) => Container(
         height: 45.h,
         width: 300.w,
         child: TextField(
@@ -19,14 +20,13 @@ class Custompasswordtextfild {
             disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15.sp),
             ),
-            prefixIcon: Icon(preicon,color: iconcolor),
+            prefixIcon: Icon(preicon, color: iconcolor),
             labelStyle: TextStyle(color: lablecolor),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15.sp),
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide:
-              const BorderSide(color: Colors.grey, width: 1.0),
+              borderSide: const BorderSide(color: Colors.grey, width: 1.0),
               borderRadius: BorderRadius.circular(15.sp),
             ),
             focusedBorder: OutlineInputBorder(

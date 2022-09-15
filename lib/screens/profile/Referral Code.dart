@@ -46,8 +46,8 @@ class _ReferralCodeState extends State<ReferralCode> {
     notifier = Provider.of<ColorNotifier>(context, listen: true);
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
-    return ScreenUtilInit(
-      builder: () => Scaffold(
+    return ScreenUtilInit(builder: (context, child) {
+      return Scaffold(
         backgroundColor: notifier.getwihitecolor,
         appBar: CustomAppBar(
             notifier.getwihitecolor, "Referral Code", notifier.getblck,
@@ -124,8 +124,8 @@ class _ReferralCodeState extends State<ReferralCode> {
             ],
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 
   void _showSnackBar() {
@@ -136,11 +136,11 @@ class _ReferralCodeState extends State<ReferralCode> {
 
   Future<void> share() async {
     await Share.share(
-        'Example share text',
-        subject: 'Example share',
-        // linkUrl: 'https://flutter.dev/',
-        // chooserTitle: 'Example Chooser Title'
-        );
+      'Example share text',
+      subject: 'Example share',
+      // linkUrl: 'https://flutter.dev/',
+      // chooserTitle: 'Example Chooser Title'
+    );
   }
   // void _copyText(String text) {
   //   FlutterClipboard.copy(field.text).then((value) {

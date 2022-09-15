@@ -23,7 +23,7 @@ class _buyState extends State<buy> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         body: Column(
           children: [
@@ -34,8 +34,13 @@ class _buyState extends State<buy> {
                   const SelectStocks(),
                 );
               },
-              child: exchange_stock("assets/images/airtel.jpg", "Airtel bharti", "Airtel",
-                  "\$127.00", Icons.calculate_outlined,notifier.getbluecolor),
+              child: exchange_stock(
+                  "assets/images/airtel.jpg",
+                  "Airtel bharti",
+                  "Airtel",
+                  "\$127.00",
+                  Icons.calculate_outlined,
+                  notifier.getbluecolor),
             ),
             SizedBox(height: height / 50),
             Image.asset("assets/images/exchange_stock.png",
@@ -47,8 +52,13 @@ class _buyState extends State<buy> {
                   const SelectStocks(),
                 );
               },
-              child: exchange_stock("assets/images/Ambuja_logo.png", "Ambuja Cement",
-                  "Ambuja", "\$254.00", null,Colors.transparent),
+              child: exchange_stock(
+                  "assets/images/Ambuja_logo.png",
+                  "Ambuja Cement",
+                  "Ambuja",
+                  "\$254.00",
+                  null,
+                  Colors.transparent),
             ),
             SizedBox(height: height / 15),
             GestureDetector(
@@ -57,8 +67,8 @@ class _buyState extends State<buy> {
                   const SelectStocks(),
                 );
               },
-              child: button(
-                  "Buy", notifier.getbluecolor, notifier.getwihitecolor),
+              child:
+                  button("Buy", notifier.getbluecolor, notifier.getwihitecolor),
             ),
           ],
         ),
@@ -66,12 +76,12 @@ class _buyState extends State<buy> {
     );
   }
 
-  Widget exchange_stock(image, title, subtitle, price, icon,color) {
+  Widget exchange_stock(image, title, subtitle, price, icon, color) {
     return Center(
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(15.sp)),
-            border: Border.all(color: color,width: 1.5.sp)),
+            border: Border.all(color: color, width: 1.5.sp)),
         height: height / 12,
         child: Row(
           children: [
@@ -121,7 +131,6 @@ class _buyState extends State<buy> {
                     ),
                     SizedBox(width: width / 50),
                     Icon(icon),
-
                   ],
                 ),
               ],

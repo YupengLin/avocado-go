@@ -45,7 +45,7 @@ class _bu_sell_buttonState extends State<bu_sell_button> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Center(
+      builder: (context, child) => Center(
         child: Container(
           decoration: BoxDecoration(
             borderRadius: borderRadius,

@@ -1,12 +1,12 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
- 
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:gogrow/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
 import 'package:gogrow/Custom_BlocObserver/buy_sell_button/buy_sell_button.dart';
- 
+
 import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
 import 'package:gogrow/bottom_bar/bottom_pages/stock_exchange_tabs/Buy%20Stock.dart';
 import 'package:gogrow/button_tabs/Chart.dart';
@@ -31,7 +31,7 @@ class _Stock_DetailState extends State<Stock_Detail> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         appBar: CustomAppBar(
             notifier.getwihitecolor, "Stock Detail", notifier.getblck,

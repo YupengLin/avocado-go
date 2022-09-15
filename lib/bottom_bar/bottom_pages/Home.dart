@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         appBar: PreferredSize(
             preferredSize: Size.fromHeight(70.sp),
@@ -42,14 +42,14 @@ class _HomeState extends State<Home> {
                 children: [
                   SizedBox(height: height / 70),
                   Text(
-                    "Hello User",
+                    "Hola",
                     style: TextStyle(
                         fontSize: 15.sp,
                         color: notifier.getgrey,
                         fontFamily: 'Gilroy-Regular'),
                   ),
                   Text(
-                    "Welcome to GoGrow",
+                    "Welcome to Avocado",
                     style: TextStyle(
                         fontSize: 24.sp,
                         color: notifier.getblck,
@@ -441,7 +441,10 @@ class _HomeState extends State<Home> {
   }
 
   LineChartData mainData(color) {
-    List<Color> gradientColors = [color];
+    List<Color> colors = [color, color];
+
+    Gradient gradientColors = LinearGradient(colors: colors);
+
     return LineChartData(
       gridData: FlGridData(
         show: false,
@@ -457,10 +460,12 @@ class _HomeState extends State<Home> {
       ),
       titlesData: FlTitlesData(
         show: false,
-        leftTitles: SideTitles(
-          showTitles: false,
-          reservedSize: 20,
-          margin: 8,
+        leftTitles: AxisTitles(
+          sideTitles: SideTitles(
+            showTitles: false,
+            reservedSize: 20,
+            interval: 8,
+          ),
         ),
       ),
       borderData: FlBorderData(
@@ -486,7 +491,7 @@ class _HomeState extends State<Home> {
             const FlSpot(10, 3),
           ],
           isCurved: true,
-          colors: gradientColors,
+          gradient: gradientColors,
           barWidth: 2,
           isStrokeCapRound: true,
           dotData: FlDotData(
@@ -494,8 +499,8 @@ class _HomeState extends State<Home> {
           ),
           belowBarData: BarAreaData(
             show: true,
-            colors:
-                gradientColors.map((color) => color.withOpacity(0.1)).toList(),
+            gradient: LinearGradient(
+                colors: colors.map((color) => color.withOpacity(0.1)).toList()),
           ),
         ),
       ],

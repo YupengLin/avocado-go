@@ -5,7 +5,7 @@ class Customtextfild {
   static Widget textField(labletext, focuscolor, preicon, lablecolor, iconcolor,
       textcolor, bordercolor) {
     return ScreenUtilInit(
-      builder: () => Container(
+      builder: (context, child) => Container(
         height: 45.h,
         width: 300.w,
         child: TextField(

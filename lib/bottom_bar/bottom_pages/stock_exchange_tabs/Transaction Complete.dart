@@ -27,7 +27,7 @@ class _TransactionCompleteState extends State<TransactionComplete> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         body: SingleChildScrollView(
           child: Column(
@@ -37,7 +37,7 @@ class _TransactionCompleteState extends State<TransactionComplete> {
                 child: Image.asset("assets/images/TransactionComplete.png",
                     height: height / 5),
               ),
-              SizedBox(height: height/50),
+              SizedBox(height: height / 50),
               Text(
                 "Transaction Complete",
                 style: TextStyle(
@@ -55,7 +55,7 @@ class _TransactionCompleteState extends State<TransactionComplete> {
                     fontFamily: 'Gilroy-Regular'),
               ),
               Padding(
-                padding:  EdgeInsets.only(left: width/15,right: width/3.5),
+                padding: EdgeInsets.only(left: width / 15, right: width / 3.5),
                 child: Container(
                   height: height / 2.8,
                   width: double.infinity,
@@ -80,13 +80,14 @@ class _TransactionCompleteState extends State<TransactionComplete> {
                   onTap: () {
                     Get.to(const Portfolio());
                   },
-                  child: button("View Portfolio", notifier.getbluecolor, notifier.getwihitecolor)),
+                  child: button("View Portfolio", notifier.getbluecolor,
+                      notifier.getwihitecolor)),
               GestureDetector(
-
                   onTap: () {
-                    Get.to( bottom_Home());
+                    Get.to(bottom_Home());
                   },
-                  child: button("Go to Home", notifier.getwihitecolor, notifier.getbluecolor)),
+                  child: button("Go to Home", notifier.getwihitecolor,
+                      notifier.getbluecolor)),
             ],
           ),
         ),

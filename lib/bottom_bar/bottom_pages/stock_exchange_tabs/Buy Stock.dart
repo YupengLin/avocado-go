@@ -24,10 +24,14 @@ class _BuyStockState extends State<BuyStock> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
-        appBar: CustomAppBar(notifier.getwihitecolor, "Buy Stock",notifier.getblck,
-            height: height / 15,),
+        appBar: CustomAppBar(
+          notifier.getwihitecolor,
+          "Buy Stock",
+          notifier.getblck,
+          height: height / 15,
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -61,8 +65,8 @@ class _BuyStockState extends State<BuyStock> {
                   onTap: () {
                     Get.to(const PaymentMethod());
                   },
-                  child: button("Buy", notifier.getbluecolor,
-                      notifier.getwihitecolor))
+                  child: button(
+                      "Buy", notifier.getbluecolor, notifier.getwihitecolor))
             ],
           ),
         ),
@@ -72,17 +76,20 @@ class _BuyStockState extends State<BuyStock> {
 
   Widget max_price(txt) {
     return Container(
-      height: height/15,
-      width: width/5.5,
-
-      child: Card(elevation: 1,shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12.0),
-      ),
+      height: height / 15,
+      width: width / 5.5,
+      child: Card(
+        elevation: 1,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12.0),
+        ),
         child: Center(
           child: Text(
             txt,
             style: TextStyle(
-                fontSize: 25.sp, color: notifier.getgrey, fontFamily: 'Gilroy_Bold'),
+                fontSize: 25.sp,
+                color: notifier.getgrey,
+                fontFamily: 'Gilroy_Bold'),
           ),
         ),
       ),
@@ -98,7 +105,10 @@ class _BuyStockState extends State<BuyStock> {
             fontSize: 30.sp,
             color: notifier.getblck,
             fontFamily: 'Gilroy_Bold'),
-        decoration:  InputDecoration(border: InputBorder.none,hintText: "0",hintStyle: TextStyle(color: notifier.getblck,fontSize: 40.sp)),
+        decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: "0",
+            hintStyle: TextStyle(color: notifier.getblck, fontSize: 40.sp)),
       ),
     );
   }

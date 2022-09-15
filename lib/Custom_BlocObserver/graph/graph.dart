@@ -1,10 +1,9 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-LineChartData mainData(color,opcity) {
-
-
-  List<Color> gradientColors = [color];
+LineChartData mainData(color, opcity) {
+  List<Color> colors = [color, color];
+  Gradient gradientColors = LinearGradient(colors: colors);
   return LineChartData(
     gridData: FlGridData(
       show: false,
@@ -19,16 +18,16 @@ LineChartData mainData(color,opcity) {
       },
     ),
     titlesData: FlTitlesData(
-      show: false,
-      leftTitles: SideTitles(
-        showTitles: false,
-        reservedSize: 20,
-        margin: 8,
-      ),
-    ),
+        show: false,
+        leftTitles: AxisTitles(
+          sideTitles: SideTitles(
+            showTitles: false,
+            reservedSize: 20,
+            interval: 8,
+          ),
+        )),
     borderData: FlBorderData(
-        show: true,
-        border: Border.all(color: Colors.white, width: 0)),
+        show: true, border: Border.all(color: Colors.white, width: 0)),
     minX: 0,
     maxX: 8,
     minY: 0,
@@ -49,7 +48,7 @@ LineChartData mainData(color,opcity) {
           const FlSpot(10, 3),
         ],
         isCurved: true,
-        colors: gradientColors,
+        gradient: gradientColors,
         barWidth: 2,
         isStrokeCapRound: false,
         dotData: FlDotData(
@@ -57,8 +56,9 @@ LineChartData mainData(color,opcity) {
         ),
         belowBarData: BarAreaData(
           show: true,
-          colors:
-          gradientColors.map((color) => color.withOpacity(opcity)).toList(),
+          gradient: LinearGradient(
+              colors:
+                  colors.map((color) => color.withOpacity(opcity)).toList()),
         ),
       ),
     ],

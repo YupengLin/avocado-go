@@ -40,7 +40,7 @@ class _faceidState extends State<faceid> {
     width = MediaQuery.of(context).size.width;
 
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         appBar: CustomAppBar(notifier.getwihitecolor, "", notifier.getblck,
             height: height / 15),

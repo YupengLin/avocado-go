@@ -41,7 +41,7 @@ class _onbondingtwoState extends State<onbondingtwo> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         body: SingleChildScrollView(
           child: Column(

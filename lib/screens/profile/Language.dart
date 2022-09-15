@@ -11,7 +11,7 @@ import 'package:gogrow/language/translatekey.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 
 class Language extends StatefulWidget {
-    Language({Key? key}) : super(key: key);
+  Language({Key? key}) : super(key: key);
 
   @override
   State<Language> createState() => _LanguageState();
@@ -34,6 +34,7 @@ class _LanguageState extends State<Language> {
     super.initState();
     getdarkmodepreviousstate();
   }
+
   final localizationController = Get.find<LocalizationController>();
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,7 @@ class _LanguageState extends State<Language> {
     width = MediaQuery.of(context).size.width;
 
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         appBar: CustomAppBar(
             notifier.getwihitecolor, "Language", notifier.getblck,
@@ -66,22 +67,29 @@ class _LanguageState extends State<Language> {
                   onTap: () {
                     // localizationController.toggleLanguage();
                   },
-                  child: select_Language("assets/images/English.png",TKey.English.translate(context))),
-              SizedBox(height: height / 20),
-              select_Language("assets/images/Deutsch.png", TKey.Deutsch.translate(context)),
-              SizedBox(height: height / 20),
-              select_Language("assets/images/Spanish.png", TKey.Spanish.translate(context)),
-              SizedBox(height: height / 20),
-              select_Language("assets/images/French.png", TKey.French.translate(context)),
-              SizedBox(height: height / 20),
-              select_Language("assets/images/Portuguese.png", TKey.Portuguese.translate(context)),
+                  child: select_Language("assets/images/English.png",
+                      TKey.English.translate(context))),
               SizedBox(height: height / 20),
               select_Language(
-                  "assets/images/Bahasa_Indonesia.png", TKey.BahasaIndonesia.translate(context)),
+                  "assets/images/Deutsch.png", TKey.Deutsch.translate(context)),
               SizedBox(height: height / 20),
-              select_Language("assets/images/Russian.png", TKey.Russian.translate(context)),
+              select_Language(
+                  "assets/images/Spanish.png", TKey.Spanish.translate(context)),
               SizedBox(height: height / 20),
-              select_Language("assets/images/Italian.png",TKey.Italian.translate(context)),
+              select_Language(
+                  "assets/images/French.png", TKey.French.translate(context)),
+              SizedBox(height: height / 20),
+              select_Language("assets/images/Portuguese.png",
+                  TKey.Portuguese.translate(context)),
+              SizedBox(height: height / 20),
+              select_Language("assets/images/Bahasa_Indonesia.png",
+                  TKey.BahasaIndonesia.translate(context)),
+              SizedBox(height: height / 20),
+              select_Language(
+                  "assets/images/Russian.png", TKey.Russian.translate(context)),
+              SizedBox(height: height / 20),
+              select_Language(
+                  "assets/images/Italian.png", TKey.Italian.translate(context)),
             ],
           ),
         ),
@@ -90,7 +98,8 @@ class _LanguageState extends State<Language> {
   }
 
   Widget select_Language(image, language_name) {
-    return Container(color: Colors.transparent,
+    return Container(
+      color: Colors.transparent,
       child: Row(
         children: [
           SizedBox(width: width / 15),

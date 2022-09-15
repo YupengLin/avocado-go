@@ -29,7 +29,7 @@ class _ProfileState extends State<Profile> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         appBar: CustomAppBar(
             notifier.getwihitecolor, "Profile", notifier.getblck,
@@ -55,7 +55,7 @@ class _ProfileState extends State<Profile> {
               SizedBox(height: height / 30),
               GestureDetector(
                   onTap: () {
-                    Get.to(  Language());
+                    Get.to(Language());
                   },
                   child: iteam_list(
                       "assets/images/Language.png", "English", "Language")),

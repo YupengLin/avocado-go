@@ -81,7 +81,8 @@ class _fiveyearState extends State<fiveyear> {
   }
 
   LineChartData onedaymainData(color, opcity) {
-    List<Color> gradientColors = [color];
+    List<Color> colors = [color, color];
+    Gradient gradientColors = LinearGradient(colors: colors);
     return LineChartData(
       gridData: FlGridData(
         show: false,
@@ -97,10 +98,12 @@ class _fiveyearState extends State<fiveyear> {
       ),
       titlesData: FlTitlesData(
         show: false,
-        leftTitles: SideTitles(
-          showTitles: false,
-          reservedSize: 20,
-          margin: 8,
+        leftTitles: AxisTitles(
+          sideTitles: SideTitles(
+            showTitles: false,
+            reservedSize: 20,
+            interval: 8,
+          ),
         ),
       ),
       borderData: FlBorderData(
@@ -125,7 +128,7 @@ class _fiveyearState extends State<fiveyear> {
             const FlSpot(10, 2),
           ],
           isCurved: true,
-          colors: gradientColors,
+          gradient: gradientColors,
           barWidth: 2,
           isStrokeCapRound: false,
           dotData: FlDotData(
@@ -133,9 +136,9 @@ class _fiveyearState extends State<fiveyear> {
           ),
           belowBarData: BarAreaData(
             show: true,
-            colors: gradientColors
-                .map((color) => color.withOpacity(opcity))
-                .toList(),
+            gradient: LinearGradient(
+                colors:
+                    colors.map((color) => color.withOpacity(opcity)).toList()),
           ),
         ),
       ],

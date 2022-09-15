@@ -1,5 +1,5 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
- 
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -33,19 +33,20 @@ class _ChartState extends State<Chart> {
       notifier.setIsDark = previusstate;
     }
   }
-@override
+
+  @override
   void initState() {
-   
     super.initState();
     getdarkmodepreviousstate();
   }
+
   @override
   Widget build(BuildContext context) {
     notifier = Provider.of<ColorNotifier>(context, listen: true);
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      builder: () => Scaffold(
+      builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
         body: SingleChildScrollView(
           child: Column(
