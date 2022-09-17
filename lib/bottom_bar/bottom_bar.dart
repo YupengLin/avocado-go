@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/Home.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/Order.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/Portfolio.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/Profile.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/Stock_Exchange.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/Home.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/Order.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/Portfolio.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/Profile.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/Stock_Exchange.dart';
 import '../utils/medeiaqury/medeiaqury.dart';
 
 class bottom_Home extends StatefulWidget {

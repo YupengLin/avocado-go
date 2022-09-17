@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:gogrow/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
-import 'package:gogrow/Custom_BlocObserver/button/custtom_button.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/screens/Payment%20Method/Payment%20Method.dart';
+import 'package:avocado_go/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
+import 'package:avocado_go/Custom_BlocObserver/button/custtom_button.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/screens/Payment%20Method/Payment%20Method.dart';
 import '../../../utils/medeiaqury/medeiaqury.dart';
 
 class BuyStock extends StatefulWidget {

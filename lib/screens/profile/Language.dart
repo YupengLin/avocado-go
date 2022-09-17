@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gogrow/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
-import 'package:gogrow/Custom_BlocObserver/custtom_textfild/consttom_textfild.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/language/localizetion_services.dart';
-import 'package:gogrow/language/translatekey.dart';
+import 'package:avocado_go/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
+import 'package:avocado_go/Custom_BlocObserver/custtom_textfild/consttom_textfild.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/language/localizetion_services.dart';
+import 'package:avocado_go/language/translatekey.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 
 class Language extends StatefulWidget {

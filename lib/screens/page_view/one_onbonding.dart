@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gogrow/Custom_BlocObserver/button/custtom_button.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/screens/Auth/Login.dart';
-import 'package:gogrow/screens/page_view/onbonding_two.dart';
+import 'package:avocado_go/Custom_BlocObserver/button/custtom_button.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/screens/Auth/Login.dart';
+import 'package:avocado_go/screens/page_view/onbonding_two.dart';
 
 import '../../utils/medeiaqury/medeiaqury.dart';
 

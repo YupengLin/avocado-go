@@ -1,6 +1,6 @@
-name: gogrow
-description: A new Flutter project.
-  accidentally published to
+name: avocado_go
+description: A new way to understand cryto world.
+#  accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 # The following line prevents the package from being
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

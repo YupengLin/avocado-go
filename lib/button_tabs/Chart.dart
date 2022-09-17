@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/graph_tabs/1D.dart';
-import 'package:gogrow/graph_tabs/1M.dart';
-import 'package:gogrow/graph_tabs/1W.dart';
-import 'package:gogrow/graph_tabs/1Y.dart';
-import 'package:gogrow/graph_tabs/5Y.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/graph_tabs/1D.dart';
+import 'package:avocado_go/graph_tabs/1M.dart';
+import 'package:avocado_go/graph_tabs/1W.dart';
+import 'package:avocado_go/graph_tabs/1Y.dart';
+import 'package:avocado_go/graph_tabs/5Y.dart';
 import '../utils/medeiaqury/medeiaqury.dart';
 
 class Chart extends StatefulWidget {

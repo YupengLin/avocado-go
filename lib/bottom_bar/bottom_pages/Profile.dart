@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:gogrow/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/screens/Payment%20Method/choice_payment.dart';
-import 'package:gogrow/screens/profile/FAQ.dart';
-import 'package:gogrow/screens/profile/Language.dart';
-import 'package:gogrow/screens/profile/Message%20Support.dart';
-import 'package:gogrow/screens/profile/My%20Account.dart';
-import 'package:gogrow/screens/profile/Referral%20Code.dart';
-import 'package:gogrow/screens/profile/Settings.dart';
+import 'package:avocado_go/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/screens/Payment%20Method/choice_payment.dart';
+import 'package:avocado_go/screens/profile/FAQ.dart';
+import 'package:avocado_go/screens/profile/Language.dart';
+import 'package:avocado_go/screens/profile/Message%20Support.dart';
+import 'package:avocado_go/screens/profile/My%20Account.dart';
+import 'package:avocado_go/screens/profile/Referral%20Code.dart';
+import 'package:avocado_go/screens/profile/Settings.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 
 class Profile extends StatefulWidget {

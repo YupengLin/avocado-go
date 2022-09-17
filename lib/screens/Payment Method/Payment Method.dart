@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gogrow/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
-import 'package:gogrow/Custom_BlocObserver/button/custtom_button.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/screens/Payment%20Method/Confirm%20Order.dart';
-import 'package:gogrow/screens/Payment%20Method/choice_payment.dart';
+import 'package:avocado_go/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
+import 'package:avocado_go/Custom_BlocObserver/button/custtom_button.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/screens/Payment%20Method/Confirm%20Order.dart';
+import 'package:avocado_go/screens/Payment%20Method/choice_payment.dart';
 import '../../card_type/Custtom_csrd_type.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 

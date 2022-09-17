@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:gogrow/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/stock_exchange_tabs/buy.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/stock_exchange_tabs/sell.dart';
+import 'package:avocado_go/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/stock_exchange_tabs/buy.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/stock_exchange_tabs/sell.dart';
 
 import '../../Custom_BlocObserver/notifire_clor.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';

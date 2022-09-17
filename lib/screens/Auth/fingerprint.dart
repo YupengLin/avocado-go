@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/screens/Auth/Pin.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/screens/Auth/Pin.dart';
 import '../../Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 

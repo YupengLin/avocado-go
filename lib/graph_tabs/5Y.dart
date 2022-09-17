@@ -18,8 +18,8 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/utils/medeiaqury/medeiaqury.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/utils/medeiaqury/medeiaqury.dart';
 
 class fiveyear extends StatefulWidget {
   const fiveyear({Key? key}) : super(key: key);

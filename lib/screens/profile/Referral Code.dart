@@ -5,9 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gogrow/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
-import 'package:gogrow/Custom_BlocObserver/button/custtom_button.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
+import 'package:avocado_go/Custom_BlocObserver/button/custtom_button.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
 
 import '../../utils/medeiaqury/medeiaqury.dart';
 

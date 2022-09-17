@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:gogrow/Custom_BlocObserver/Custtom_stoc/Custtom_stoc.dart';
-import 'package:gogrow/Custom_BlocObserver/Stock%20Gains%20card/Stock_Gains_card.dart';
-import 'package:gogrow/Custom_BlocObserver/custtom_slock_list/custtom_slock_list.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/stock_exchange_tabs/Select%20Stocks.dart';
+import 'package:avocado_go/Custom_BlocObserver/Custtom_stoc/Custtom_stoc.dart';
+import 'package:avocado_go/Custom_BlocObserver/Stock%20Gains%20card/Stock_Gains_card.dart';
+import 'package:avocado_go/Custom_BlocObserver/custtom_slock_list/custtom_slock_list.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/stock_exchange_tabs/Select%20Stocks.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 import '../Stock_Detail.dart';
 
@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: height / 70),
+                  SizedBox(height: height / 70, width: width),
                   Text(
                     "Hola",
                     style: TextStyle(

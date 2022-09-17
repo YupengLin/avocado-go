@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/screens/page_view/onbonding_two.dart';
-import 'package:gogrow/screens/page_view/one_onbonding.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/screens/page_view/onbonding_two.dart';
+import 'package:avocado_go/screens/page_view/one_onbonding.dart';
 
 class swiper extends StatefulWidget {
   @override

@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:gogrow/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
-import 'package:gogrow/Custom_BlocObserver/buy_sell_button/buy_sell_button.dart';
+import 'package:avocado_go/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
+import 'package:avocado_go/Custom_BlocObserver/buy_sell_button/buy_sell_button.dart';
 
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/bottom_bar/bottom_pages/stock_exchange_tabs/Buy%20Stock.dart';
-import 'package:gogrow/button_tabs/Chart.dart';
-import 'package:gogrow/button_tabs/Live%20Trade.dart';
-import 'package:gogrow/button_tabs/Summary.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/bottom_bar/bottom_pages/stock_exchange_tabs/Buy%20Stock.dart';
+import 'package:avocado_go/button_tabs/Chart.dart';
+import 'package:avocado_go/button_tabs/Live%20Trade.dart';
+import 'package:avocado_go/button_tabs/Summary.dart';
 import '../utils/medeiaqury/medeiaqury.dart';
 
 class Stock_Detail extends StatefulWidget {

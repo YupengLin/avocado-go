@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:gogrow/Custom_BlocObserver/notifire_clor.dart';
-import 'package:gogrow/bottom_bar/Stock_Detail.dart';
-import 'package:gogrow/calenderrr.dart';
+import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
+import 'package:avocado_go/bottom_bar/Stock_Detail.dart';
+import 'package:avocado_go/calenderrr.dart';
 
 import '../../Custom_BlocObserver/custtom_slock_list/custtom_slock_list.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
