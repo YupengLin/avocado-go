@@ -1,3 +1,6 @@
+// import 'package:calendar_calendar/calendar_calendar.dart';
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -8,6 +11,8 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../Custom_BlocObserver/custtom_slock_list/custtom_slock_list.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 import '../Stock_Detail.dart';
+import 'market_cap.dart' show market_cap_volume;
+import 'package:intl/intl.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({Key? key}) : super(key: key);
@@ -30,19 +35,31 @@ class _PortfolioState extends State<Portfolio> {
   }
 
   List<ChartData> chartData = [
-    const ChartData('IND', 24),
-    const ChartData('AUS', 20),
-    const ChartData('USA', 27),
-    const ChartData('DEU', 57),
-    const ChartData('ITA', 30),
-    const ChartData('UK', 41),
+    // const ChartData('IND', 24),
+    // const ChartData('AUS', 20),
+    // const ChartData('USA', 27),
+    // const ChartData('DEU', 57),
+    // const ChartData('ITA', 30),
+    // const ChartData('UK', 41),
   ];
+
+  void generate_data() {
+    var data = market_cap_volume["volume"];
+    var xy = data!["values"] as Map<String, List>;
+    for (var i = 0; i < xy["x"]!.length; i++) {
+      // print(xy["x"]![i]);
+      var date_time = DateTime.fromMillisecondsSinceEpoch(xy["x"]![i]);
+      var date_time_str = DateFormat("dd-MM-yyyy").format(date_time);
+      chartData.add(ChartData(date_time_str, xy["y"]![i]));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     notifier = Provider.of<ColorNotifier>(context, listen: true);
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
+    generate_data();
     return ScreenUtilInit(
       builder: (context, child) => Scaffold(
         backgroundColor: notifier.getwihitecolor,
@@ -222,7 +239,7 @@ class _PortfolioState extends State<Portfolio> {
               color: notifier.getbluecolor,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y)
+              yValueMapper: (ChartData data, _) => data.y.round())
         ]);
   }
 
@@ -275,5 +292,5 @@ class ChartData {
   const ChartData(this.x, this.y);
 
   final String x;
-  final int y;
+  final double y;
 }

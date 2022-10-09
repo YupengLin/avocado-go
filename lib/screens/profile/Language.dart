@@ -71,22 +71,10 @@ class _LanguageState extends State<Language> {
                       TKey.English.translate(context))),
               SizedBox(height: height / 20),
               select_Language(
-                  "assets/images/Deutsch.png", TKey.Deutsch.translate(context)),
-              SizedBox(height: height / 20),
-              select_Language(
                   "assets/images/Spanish.png", TKey.Spanish.translate(context)),
               SizedBox(height: height / 20),
               select_Language(
                   "assets/images/French.png", TKey.French.translate(context)),
-              SizedBox(height: height / 20),
-              select_Language("assets/images/Portuguese.png",
-                  TKey.Portuguese.translate(context)),
-              SizedBox(height: height / 20),
-              select_Language("assets/images/Bahasa_Indonesia.png",
-                  TKey.BahasaIndonesia.translate(context)),
-              SizedBox(height: height / 20),
-              select_Language(
-                  "assets/images/Russian.png", TKey.Russian.translate(context)),
               SizedBox(height: height / 20),
               select_Language(
                   "assets/images/Italian.png", TKey.Italian.translate(context)),
