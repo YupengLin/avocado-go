@@ -1,7 +1,7 @@
-import '../common/config.dart';
-import '../common/constants.dart';
+import 'package:avocado_go/frameworks/avocadogo/services/avocado_mixin.dart';
+import 'package:avocado_go/services/service_config.dart';
 
-class Services {
+class Services with ConfigMixin, AvocadoMixin {
   static final Services _instance = Services._internal();
 
   factory Services() => _instance;

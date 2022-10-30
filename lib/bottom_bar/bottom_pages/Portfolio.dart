@@ -6,12 +6,12 @@ import 'package:provider/provider.dart';
 import 'package:avocado_go/Custom_BlocObserver/Custtom_app_bar/Custtom_app_bar.dart';
 import 'package:avocado_go/Custom_BlocObserver/notifire_clor.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import '../../Custom_BlocObserver/custtom_slock_list/custtom_slock_list.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 import '../Stock_Detail.dart';
 import 'market_cap.dart' show market_cap_volume, collections;
 import 'package:intl/intl.dart';
 import 'dart:math';
+import '../../services/index.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class Portfolio extends StatefulWidget {
 
 class _PortfolioState extends State<Portfolio> {
   late ColorNotifier notifier;
-
+  final Services _service = Services();
   // late List<GDPData> _chartData;
   // late TooltipBehavior _tooltipBehavior;
 
@@ -32,7 +32,12 @@ class _PortfolioState extends State<Portfolio> {
     // _tooltipBehavior = TooltipBehavior(enable: true);
     super.initState();
     generate_data();
+
     generate_collection_distribution();
+  }
+
+  Future<List?> fetch1monthTrend() async {
+    return _service.api.getTrending1Month();
   }
 
   List<ChartData> chartData = [];

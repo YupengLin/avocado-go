@@ -58,6 +58,8 @@ dependencies:
   http_auth: ^1.0.1
   flutter_cache_manager: ^3.3.0
   dio: ^4.0.6
+  inspireui: ^1.1.8
+  universal_platform: ^1.0.0+1
 
   flutter_localizations:
     sdk: flutter

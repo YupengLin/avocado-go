@@ -10,5 +10,6 @@ abstract class BaseServices {
     required this.domain,
   });
 
-  Future<List?>? getCategories() async => const [];
+  //Solmar-env.eba-vxgpfxub.us-east-1.elasticbeanstalk.com/api/v1/eth/collection/trending_1_month
+  Future<List?>? getTrending1Month() async => const [];
 }
