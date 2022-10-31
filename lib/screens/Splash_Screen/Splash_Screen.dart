@@ -6,7 +6,6 @@ import '../../Custom_BlocObserver/notifire_clor.dart';
 import '../../Custom_BlocObserver/swiper/swiper.dart';
 import '../../utils/medeiaqury/medeiaqury.dart';
 
-
 class Spash_Screen extends StatefulWidget {
   @override
   State<Spash_Screen> createState() => _Spash_ScreenState();
@@ -47,8 +46,8 @@ class _Spash_ScreenState extends State<Spash_Screen> {
     return Scaffold(
       backgroundColor: notifier.getbluecolor,
       body: Center(
-        child: Image.asset("assets/images/gogrowlogo.png",height: height/4)
-      ),
+          child: Image.asset("assets/images/avocado_logo.png",
+              height: height / 4)),
     );
   }
 }

@@ -34,6 +34,8 @@ class _PortfolioState extends State<Portfolio> {
     generate_data();
 
     generate_collection_distribution();
+
+    fetch1monthTrend();
   }
 
   Future<List?> fetch1monthTrend() async {

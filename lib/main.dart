@@ -8,10 +8,13 @@ import 'package:avocado_go/screens/Splash_Screen/Splash_Screen.dart';
 import 'Custom_BlocObserver/Custom_BlocObserver.dart';
 import 'Custom_BlocObserver/notifire_clor.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'services/services.dart';
 
 void main() async {
   await GetStorage.init();
   await ScreenUtil.ensureScreenSize();
+  Services().setAppConfig(Map.from(
+      {"url": "Solmar-env.eba-vxgpfxub.us-east-1.elasticbeanstalk.com"}));
   BlocOverrides.runZoned(
     () => runApp(App()),
     blocObserver: AppBlocObserver(),
