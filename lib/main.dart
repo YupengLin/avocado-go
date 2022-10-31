@@ -4,11 +4,12 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
 import 'package:avocado_go/language/localizetion_services.dart';
-import 'package:avocado_go/screens/Splash_Screen/Splash_Screen.dart';
+// import 'package:avocado_go/screens/Splash_Screen/Splash_Screen.dart';
 import 'Custom_BlocObserver/Custom_BlocObserver.dart';
 import 'Custom_BlocObserver/notifire_clor.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'services/services.dart';
+import 'package:avocado_go/bottom_bar/bottom_bar.dart';
 
 void main() async {
   await GetStorage.init();
@@ -45,7 +46,7 @@ class App extends StatelessWidget {
               supportedLocales: LocalizationService.supportedlocales,
               localizationsDelegates: LocalizationService.localizationsDelegate,
               debugShowCheckedModeBanner: false,
-              home: Spash_Screen(),
+              home: bottom_Home(), //Spash_Screen(),
             ),
           );
         });
