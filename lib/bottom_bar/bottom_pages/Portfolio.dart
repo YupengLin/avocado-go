@@ -27,7 +27,7 @@ class _PortfolioState extends State<Portfolio> {
   final Services _service = Services();
 
   List<NFT> _nft = <NFT>[];
-  late NFTDataSource _nftDataSource = NFTDataSource(nft: []);
+  NFTDataSource _nftDataSource = NFTDataSource(nft: []);
 
   @override
   void initState() {
@@ -223,16 +223,16 @@ class _PortfolioState extends State<Portfolio> {
                       SizedBox(height: height / 30),
                       SfDataGrid(
                         source: _nftDataSource,
-                        columnWidthMode: ColumnWidthMode.auto,
+                        columnWidthMode: ColumnWidthMode.fill,
                         columns: [
                           GridColumn(
-                              columnName: 'contract address',
+                              columnName: 'thumbnail',
                               label: Container(
                                   padding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
-                                  alignment: Alignment.centerRight,
+                                      EdgeInsets.symmetric(horizontal: 2.0),
+                                  alignment: Alignment.centerLeft,
                                   child: Text(
-                                    'Contract Address',
+                                    '',
                                     overflow: TextOverflow.ellipsis,
                                   ))),
                           GridColumn(
@@ -246,13 +246,13 @@ class _PortfolioState extends State<Portfolio> {
                                     overflow: TextOverflow.ellipsis,
                                   ))),
                           GridColumn(
-                              columnName: 'thumbnail',
+                              columnName: 'contract address',
                               label: Container(
                                   padding:
                                       EdgeInsets.symmetric(horizontal: 16.0),
                                   alignment: Alignment.centerLeft,
                                   child: Text(
-                                    '',
+                                    'Contract Address',
                                     overflow: TextOverflow.ellipsis,
                                   ))),
                         ],

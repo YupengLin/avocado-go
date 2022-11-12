@@ -27,11 +27,11 @@ class NFTDataSource extends DataGridSource {
     dataGridRows = nft
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<String>(
-                  columnName: 'contract address',
-                  value: dataGridRow.contract_address),
+                  columnName: 'thumbnail', value: dataGridRow.thumbnail),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
               DataGridCell<String>(
-                  columnName: 'thumbnail', value: dataGridRow.thumbnail),
+                  columnName: 'contract address',
+                  value: dataGridRow.contract_address),
             ]))
         .toList();
   }
@@ -46,14 +46,16 @@ class NFTDataSource extends DataGridSource {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
-          alignment: dataGridCell.columnName == 'contract address'
-              ? Alignment.centerRight
-              : Alignment.centerLeft,
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: Text(
-            dataGridCell.value.toString(),
-            overflow: TextOverflow.ellipsis,
-          ));
+          alignment: Alignment.center,
+          padding: dataGridCell.columnName == 'thumbnail'
+              ? EdgeInsets.symmetric(horizontal: 2.0)
+              : EdgeInsets.symmetric(horizontal: 16.0),
+          child: dataGridCell.columnName == "thumbnail"
+              ? Image.network(dataGridCell.value.toString())
+              : Text(
+                  dataGridCell.value.toString(),
+                  overflow: TextOverflow.ellipsis,
+                ));
     }).toList());
   }
 
