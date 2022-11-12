@@ -12,6 +12,8 @@ import 'market_cap.dart' show market_cap_volume, collections;
 import 'package:intl/intl.dart';
 import 'dart:math';
 import '../../services/index.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'model/nft.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({Key? key}) : super(key: key);
@@ -23,23 +25,33 @@ class Portfolio extends StatefulWidget {
 class _PortfolioState extends State<Portfolio> {
   late ColorNotifier notifier;
   final Services _service = Services();
-  // late List<GDPData> _chartData;
-  // late TooltipBehavior _tooltipBehavior;
+
+  List<NFT> _nft = <NFT>[];
+  late NFTDataSource _nftDataSource;
 
   @override
   void initState() {
-    // _chartData = getChartData();
-    // _tooltipBehavior = TooltipBehavior(enable: true);
     super.initState();
     generate_data();
 
     generate_collection_distribution();
 
-    fetch1monthTrend();
+    fetch1monthTrend()
+        .then((value) => _nftDataSource = NFTDataSource(nft: value));
+
+    print(_nft);
   }
 
-  Future<List?> fetch1monthTrend() async {
-    return _service.api.getTrending1Month();
+  Future<List<NFT>> fetch1monthTrend() async {
+    var response = await _service.api.getTrending1Month();
+    List<NFT> _nfts = <NFT>[];
+    for (var nft in response) {
+      // print(NFT.fromJson(nft).contract_address);
+      _nfts.add(NFT.fromJson(nft));
+    }
+    // _nftDataSource.updateDataGridSource()
+    setState(() {});
+    return _nfts;
   }
 
   List<ChartData> chartData = [];
@@ -208,6 +220,43 @@ class _PortfolioState extends State<Portfolio> {
                       ),
                       SizedBox(height: height / 30),
                       circular_chart(),
+                      SizedBox(height: height / 30),
+                      SfDataGrid(
+                        source: _nftDataSource,
+                        columnWidthMode: ColumnWidthMode.auto,
+                        columns: [
+                          GridColumn(
+                              columnName: 'contract address',
+                              label: Container(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  alignment: Alignment.centerRight,
+                                  child: Text(
+                                    'Contract Address',
+                                    overflow: TextOverflow.ellipsis,
+                                  ))),
+                          GridColumn(
+                              columnName: 'name',
+                              label: Container(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'Name',
+                                    overflow: TextOverflow.ellipsis,
+                                  ))),
+                          GridColumn(
+                              columnName: 'thumbnail',
+                              label: Container(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    '',
+                                    overflow: TextOverflow.ellipsis,
+                                  ))),
+                        ],
+                      ),
                       // GestureDetector(
                       //   onTap: () {
                       //     Get.to(const Stock_Detail());

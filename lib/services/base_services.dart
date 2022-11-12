@@ -8,5 +8,5 @@ abstract class BaseServices {
   });
 
   //Solmar-env.eba-vxgpfxub.us-east-1.elasticbeanstalk.com/api/v1/eth/collection/trending_1_month
-  Future<List?>? getTrending1Month() async => const [];
+  Future<dynamic> getTrending1Month() async => const [];
 }
