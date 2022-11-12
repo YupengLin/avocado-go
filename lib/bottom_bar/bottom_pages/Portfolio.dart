@@ -27,7 +27,7 @@ class _PortfolioState extends State<Portfolio> {
   final Services _service = Services();
 
   List<NFT> _nft = <NFT>[];
-  late NFTDataSource _nftDataSource;
+  late NFTDataSource _nftDataSource = NFTDataSource(nft: []);
 
   @override
   void initState() {
@@ -36,13 +36,12 @@ class _PortfolioState extends State<Portfolio> {
 
     generate_collection_distribution();
 
-    fetch1monthTrend()
-        .then((value) => _nftDataSource = NFTDataSource(nft: value));
+    fetch1monthTrend();
 
     print(_nft);
   }
 
-  Future<List<NFT>> fetch1monthTrend() async {
+  void fetch1monthTrend() async {
     var response = await _service.api.getTrending1Month();
     List<NFT> _nfts = <NFT>[];
     for (var nft in response) {
@@ -50,8 +49,9 @@ class _PortfolioState extends State<Portfolio> {
       _nfts.add(NFT.fromJson(nft));
     }
     // _nftDataSource.updateDataGridSource()
+    _nftDataSource = NFTDataSource(nft: _nfts);
     setState(() {});
-    return _nfts;
+    // return _nfts;
   }
 
   List<ChartData> chartData = [];
