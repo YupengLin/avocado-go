@@ -52,7 +52,7 @@ class _custtom_buttonState extends State<custtom_button> {
           child: Row(
             children: [
               SizedBox(width: width / 15),
-              Image.asset(widget.image!, height: height / 20),
+              Image.network(widget.image!, height: height / 20),
               SizedBox(width: width / 30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
