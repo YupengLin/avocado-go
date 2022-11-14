@@ -50,6 +50,7 @@ class _custtom_buttonState extends State<custtom_button> {
           color: Colors.transparent,
           height: height / 17,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(width: width / 15),
               Image.network(widget.image!, height: height / 20),

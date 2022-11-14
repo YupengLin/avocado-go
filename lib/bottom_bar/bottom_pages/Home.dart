@@ -75,7 +75,7 @@ class _HomeState extends State<Home> {
                         fontSize: 18.sp,
                         fontFamily: 'Gilroy_Bold'),
                   ),
-                  SizedBox(width: width / 1.8),
+                  SizedBox(width: width / 10),
                   GestureDetector(
                     onTap: () {
                       Get.to(const SelectStocks());
