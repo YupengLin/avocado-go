@@ -63,7 +63,7 @@ class _faceidState extends State<faceid> {
                       ),
                       SizedBox(height: height / 25),
                       Text(
-                        "You can use face authentication to login\ninto GoGrow",
+                        "You can use face authentication to login\ninto Avocadogo",
                         style:
                             TextStyle(fontSize: 16.sp, color: notifier.getgrey),
                       ),

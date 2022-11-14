@@ -74,9 +74,9 @@ class _SettingsState extends State<Settings> {
               SizedBox(height: height / 20),
               GestureDetector(
                   onTap: () {
-                    Get.to(Pages("Rate GoGrow"));
+                    Get.to(Pages("Rate Avocadogo"));
                   },
-                  child: setting_option("Rate GoGrow")),
+                  child: setting_option("Rate Avocadogo")),
               SizedBox(height: height / 20),
               GestureDetector(
                   onTap: () {
@@ -130,7 +130,7 @@ class _SettingsState extends State<Settings> {
               SizedBox(height: height / 80),
               Center(
                 child: Text(
-                  "© 2022 GoGrow version 1.0",
+                  "© 2022 Avocado go version 1.0",
                   style: TextStyle(
                       color: notifier.getgrey,
                       fontSize: 14.sp,

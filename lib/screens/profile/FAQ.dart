@@ -39,7 +39,7 @@ class _FAQState extends State<FAQ> {
   }
 
   final _loremIpsum =
-      "Open the GoGrow app to get started and follow the\nsteps. GoGrow doesn’t charge a fee to create or\nmaintain your GoGrow account.";
+      "Open the Avocado go app to get started and follow the\nsteps. Avocadogo doesn’t charge a fee to create or\nmaintain your Avocadogo account.";
   final _contentStyle = const TextStyle(
       color: Color(0xff999999), fontSize: 14, fontWeight: FontWeight.normal);
 
@@ -120,7 +120,7 @@ class _FAQState extends State<FAQ> {
                     sectionClosingHapticFeedback: SectionHapticFeedback.light,
                     headerBackgroundColor: notifier.getwihitecolor,
                     header: Text(
-                      'How to create a GoGrow account?',
+                      'How to create a Avocadogo account?',
                       style: TextStyle(
                           color: notifier.getblck,
                           fontSize: 15,

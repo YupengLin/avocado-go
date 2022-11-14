@@ -124,7 +124,7 @@ class _SignUpState extends State<SignUp> {
                               Row(
                                 children: [
                                   Text(
-                                    "I agree to the GoGrow ",
+                                    "I agree to the Avocadogo ",
                                     style: TextStyle(
                                         fontSize: height / 55,
                                         color: notifier.getblck),

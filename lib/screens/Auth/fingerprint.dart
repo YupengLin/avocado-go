@@ -61,7 +61,7 @@ class _fingerprintState extends State<fingerprint> {
                       ),
                       SizedBox(height: height / 25),
                       Text(
-                        "You can use fingerprint authentication to\nlogin into GoGrow",
+                        "You can use fingerprint authentication to\nlogin into Avocadogo",
                         style:
                             TextStyle(fontSize: 16.sp, color: notifier.getgrey),
                       ),
