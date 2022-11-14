@@ -54,30 +54,18 @@ class _custtom_buttonState extends State<custtom_button> {
               SizedBox(width: width / 15),
               Image.network(widget.image!, height: height / 20),
               SizedBox(width: width / 30),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    widget.title!,
-                    style: TextStyle(
-                        fontSize: 11.sp,
-                        fontFamily: 'Gilroy_Bold',
-                        color: notifier.getblck),
-                  ),
-                  Text(
-                    widget.subtitle!,
-                    style: TextStyle(
-                        fontSize: 12.sp,
-                        fontFamily: 'Gilroy-Regular',
-                        color: notifier.getgrey),
-                  ),
-                ],
+              Flexible(
+                child: Text(
+                  widget.title!,
+                  overflow: TextOverflow.fade,
+                  maxLines: 2,
+                  style: TextStyle(
+                      fontSize: 11.sp,
+                      fontFamily: 'Gilroy_Bold',
+                      color: notifier.getblck),
+                ),
               ),
-              // SizedBox(width: width,),
-              Spacer(),
-              Image.asset("assets/images/Watchlist_chart.png",
-                  height: height / 30),
-              const Spacer(),
+              SizedBox(width: width / 30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

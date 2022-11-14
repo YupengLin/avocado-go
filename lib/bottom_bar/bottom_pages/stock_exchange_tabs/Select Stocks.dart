@@ -69,7 +69,7 @@ class _SelectStocksState extends State<SelectStocks> {
           height: height / 15),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 25, right: 25),
+          padding: const EdgeInsets.only(left: 5, right: 5),
           child: Column(
             children: [
               SizedBox(height: height / 15),
